@@ -10,7 +10,7 @@ public class IngredientObject : MonoBehaviour
 
     public void OnClick()
     {
-        FindObjectOfType<CookingSystem>().AddIngredient(data);
+       // FindObjectOfType<CookingSystem>().AddIngredient(data);
         moving = true;
     }
 
