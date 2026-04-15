@@ -1966,6 +1966,10 @@ PrefabInstance:
       value: 76
       objectReference: {fileID: 0}
     - target: {fileID: -1071359958148435772, guid: f78dbb28538fbb84695b026c773785c9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1071359958148435772, guid: f78dbb28538fbb84695b026c773785c9, type: 3}
       propertyPath: m_BounceIntensity
       value: 603.09
       objectReference: {fileID: 0}
@@ -2356,7 +2360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1623376711
 RectTransform:
   m_ObjectHideFlags: 0
