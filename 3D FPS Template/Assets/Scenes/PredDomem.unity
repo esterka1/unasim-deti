@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 1
-  m_FogColor: {r: 0.3089623, g: 0.3586321, b: 0.5, a: 1}
+  m_FogColor: {r: 0.0115254605, g: 0.15460134, b: 0.3490566, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.003
   m_LinearFogStart: 0
@@ -2351,63 +2351,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &1602416069
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 618.6081
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.92391
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 365.1826
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
-      propertyPath: m_Name
-      value: Debris_BrokenCar (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4ef890d518b96c6428e8764eb4f2e137, type: 3}
 --- !u!1 &1623376710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,8 +2942,16 @@ PrefabInstance:
       value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 1493377027707604677, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06248474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493377027707604677, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.13
+      value: 1.3100001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493377027707604677, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1753284404666650805, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3063,8 +3014,12 @@ PrefabInstance:
       value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 6246868625705560549, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06248474
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246868625705560549, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.13
+      value: 1.3100001
       objectReference: {fileID: 0}
     - target: {fileID: 6766976719680631635, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3766,5 +3721,4 @@ SceneRoots:
   - {fileID: 1902706977}
   - {fileID: 1967409075}
   - {fileID: 431154577}
-  - {fileID: 1602416069}
   - {fileID: 1719351719}
