@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Ingredient
+public class Ingredientvalue
 {
     public string ingredientName;
     public int sweetness;

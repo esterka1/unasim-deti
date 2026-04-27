@@ -2,7 +2,7 @@ using UnityEngine;
 
 using System.Collections.Generic;
 
-public class Soup : MonoBehaviour
+public class stewscript : MonoBehaviour
 {
     public List<string> requiredIngredients = new List<string>();
     public List<string> addedIngredients = new List<string>();
