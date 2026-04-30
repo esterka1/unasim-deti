@@ -686,7 +686,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492087446}
-  - component: {fileID: 492087447}
   m_Layer: 0
   m_Name: Spawn_Kitchen
   m_TagString: Untagged
@@ -702,25 +701,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492087445}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.62465173, z: -0, w: 0.78090346}
   m_LocalPosition: {x: 32.57, y: 1.09278, z: 2.21286}
   m_LocalScale: {x: 1.5303, y: 1.5303, z: 1.5303}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &492087447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492087445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00bb53770ef84f647a143dcaad858f47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ReturnFromCooking
+  m_LocalEulerAnglesHint: {x: 0, y: 77.313, z: 0}
 --- !u!1001 &495970056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1560,6 +1547,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8fe238632e565e4f99860857ecce1db, type: 3}
+--- !u!1 &861183821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7171158586225836528, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
+  m_PrefabInstance: {fileID: 969964259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &861183822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861183821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f8b1aec961e664b8ae861f9e2782cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawn
+  kitchenSpawn: {fileID: 492087446}
 --- !u!1 &935088954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,7 +1958,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7171158586225836528, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 861183822}
   m_SourcePrefab: {fileID: 100100000, guid: 78aaf0d6152718845b8143642be35c2e, type: 3}
 --- !u!1 &1023690616 stripped
 GameObject:
