@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class barunkaVyhodnoceni : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void CheckSoup()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (SoupData.addedIngredients.Contains("meat"))
+        {
+            Debug.Log("To je výborný… děkuju.");
+        }
+        else
+        {
+            Debug.Log("Tohle… není ono…");
+        }
     }
 }
