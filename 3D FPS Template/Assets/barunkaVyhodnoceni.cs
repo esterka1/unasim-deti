@@ -1,16 +1,23 @@
 using UnityEngine;
+using TMPro;
 
 public class barunkaVyhodnoceni : MonoBehaviour
 {
+    public TextMeshProUGUI dialogueText;
+
     public void CheckSoup()
     {
-        if (SoupData.addedIngredients.Contains("meat"))
+        bool hasSteak = SoupData.addedIngredients.Contains("steak");
+        bool hasPotato = SoupData.addedIngredients.Contains("potato");
+        bool hasLeek = SoupData.addedIngredients.Contains("leek");
+
+        if (hasSteak && hasPotato && hasLeek && SoupData.addedIngredients.Count == 3)
         {
-            Debug.Log("To je výborný… děkuju.");
+            dialogueText.text = "To je přesně ono!";
         }
         else
         {
-            Debug.Log("Tohle… není ono…");
+            dialogueText.text = "Tohle není ono…";
         }
     }
 }

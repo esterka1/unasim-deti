@@ -1,8 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class DeliverSoup : MonoBehaviour
 {
     public barunkaVyhodnoceni barunka;
+    public TextMeshProUGUI dialogueText;
 
     private bool playerIsNear = false;
 
@@ -10,7 +12,15 @@ public class DeliverSoup : MonoBehaviour
     {
         if (playerIsNear && Input.GetKeyDown(KeyCode.E))
         {
-            barunka.CheckSoup();
+            if (!SoupData.barunkaTalked)
+            {
+                SoupData.barunkaTalked = true;
+                dialogueText.text = "Děti měly steak... dlouho jsem steak neměla...";
+            }
+            else
+            {
+                barunka.CheckSoup();
+            }
         }
     }
 
@@ -19,7 +29,15 @@ public class DeliverSoup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsNear = true;
-            Debug.Log("Press E to give soup");
+
+            if (!SoupData.barunkaTalked)
+            {
+                dialogueText.text = "Zmáčkni E a promluv s Barunkou";
+            }
+            else
+            {
+                dialogueText.text = "Zmáčkni E pro předání polévky";
+            }
         }
     }
 
@@ -28,6 +46,7 @@ public class DeliverSoup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsNear = false;
+            dialogueText.text = "";
         }
     }
 }
