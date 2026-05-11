@@ -2525,6 +2525,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 945578401}
+  - {fileID: 359567159}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6693,7 +6694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4506a58e40f3e4a976f5bbd394b27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::barunkaVyhodnoceni
-  dialogueText: {fileID: 0}
+  dialogueText: {fileID: 359567160}
 --- !u!114 &1887114733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6707,7 +6708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeliverSoup
   barunka: {fileID: 1887114732}
-  dialogueText: {fileID: 0}
+  dialogueText: {fileID: 359567160}
 --- !u!65 &1887114734
 BoxCollider:
   m_ObjectHideFlags: 0
