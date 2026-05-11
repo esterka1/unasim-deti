@@ -9097,7 +9097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Soup
   requiredIngredients:
   - potato
-  - tomato
+  - leek
   - steak
   addedIngredients: []
   maxIngredients: 3

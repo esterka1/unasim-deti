@@ -1,16 +1,23 @@
 using UnityEngine;
+using TMPro;
 
 public class barunkaVyhodnoceni : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI dialogueText;
 
-    // Update is called once per frame
-    void Update()
+    public void CheckSoup()
     {
-        
+        bool hasSteak = SoupData.addedIngredients.Contains("steak");
+        bool hasPotato = SoupData.addedIngredients.Contains("potato");
+        bool hasLeek = SoupData.addedIngredients.Contains("leek");
+
+        if (hasSteak && hasPotato && hasLeek && SoupData.addedIngredients.Count == 3)
+        {
+            dialogueText.text = "To je přesně ono!";
+        }
+        else
+        {
+            dialogueText.text = "Tohle není ono…";
+        }
     }
 }
