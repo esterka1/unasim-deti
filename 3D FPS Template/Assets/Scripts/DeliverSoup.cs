@@ -12,6 +12,18 @@ public class DeliverSoup : MonoBehaviour
     {
         if (playerIsNear && Input.GetKeyDown(KeyCode.E))
         {
+            if (dialogueText == null)
+            {
+                Debug.LogError("DialogueText není přiřazený v DeliverSoup!");
+                return;
+            }
+
+            if (barunka == null)
+            {
+                Debug.LogError("Barunka není přiřazená v DeliverSoup!");
+                return;
+            }
+
             if (!SoupData.barunkaTalked)
             {
                 SoupData.barunkaTalked = true;
@@ -26,9 +38,16 @@ public class DeliverSoup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("TRIGGER ENTER: " + other.name + " tag: " + other.tag);
         if (other.CompareTag("Player"))
         {
             playerIsNear = true;
+
+            if (dialogueText == null)
+            {
+                Debug.LogError("DialogueText není přiřazený v DeliverSoup!");
+                return;
+            }
 
             if (!SoupData.barunkaTalked)
             {
@@ -46,7 +65,11 @@ public class DeliverSoup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsNear = false;
-            dialogueText.text = "";
+
+            if (dialogueText != null)
+            {
+                dialogueText.text = "";
+            }
         }
     }
 }
