@@ -7,6 +7,18 @@ public class barunkaVyhodnoceni : MonoBehaviour
 
     public void CheckSoup()
     {
+        if (dialogueText == null)
+        {
+            Debug.LogError("DialogueText není přiřazený v BarunkaVyhodnoceni!");
+            return;
+        }
+
+        if (SoupData.addedIngredients == null)
+        {
+            dialogueText.text = "Nemáš žádnou polévku.";
+            return;
+        }
+
         bool hasSteak = SoupData.addedIngredients.Contains("steak");
         bool hasPotato = SoupData.addedIngredients.Contains("potato");
         bool hasLeek = SoupData.addedIngredients.Contains("leek");
@@ -17,7 +29,7 @@ public class barunkaVyhodnoceni : MonoBehaviour
         }
         else
         {
-            dialogueText.text = "Tohle není ono…";
+            dialogueText.text = "Tohle není ono.";
         }
     }
 }
