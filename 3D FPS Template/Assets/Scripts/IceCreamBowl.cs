@@ -11,7 +11,13 @@ public class IceCreamBowl : MonoBehaviour
     public ParticleSystem addIngredientEffect;
 
     private void Start()
+    
     {
+        void Start()
+{
+        addedIngredients.Clear();
+         IceCreamData.Clear();
+}
         IceCreamData.addedIngredients.Clear();
         addedIngredients.Clear();
 

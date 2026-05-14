@@ -2581,9 +2581,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dite1Dialog
   pressEText: {fileID: 388809658}
+  pressELabel: {fileID: 388809660}
   dialogText: {fileID: 1752114362}
-  message: "M\xE1m chu\u0165 na jahodovo-ban\xE1novou zmrzlinu...St\xE1nek je ale
-    zav\u0159en\xFD.."
+  firstMessage: "M\xE1m chu\u0165 na jahodovo-bananovou zmrzlinu..."
+  correctMessage: "D\u011Bkuju moc... To je p\u0159esn\u011B to co jsem cht\u011Bl."
+  wrongMessage: "Umm... to nen\xED to co jsem cht\u011Bl..."
 --- !u!1001 &696406178
 PrefabInstance:
   m_ObjectHideFlags: 0
