@@ -225,35 +225,20 @@ MonoBehaviour:
       m_HorizontalAdvance: 48
     m_GlyphRect:
       m_X: 10
-      m_Y: 10
-      m_Width: 42
-      m_Height: 63
-    m_Scale: 1
-    m_AtlasIndex: 0
-    m_ClassDefinitionType: 0
-  - m_Index: 207
-    m_Metrics:
-      m_Width: 38
-      m_Height: 63
-      m_HorizontalBearingX: 3
-      m_HorizontalBearingY: 62
-      m_HorizontalAdvance: 43
-    m_GlyphRect:
-      m_X: 10
       m_Y: 92
-      m_Width: 38
+      m_Width: 42
       m_Height: 63
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
   m_CharacterTable:
   - m_ElementType: 1
-    m_Unicode: 283
-    m_GlyphIndex: 221
+    m_Unicode: 357
+    m_GlyphIndex: 295
     m_Scale: 1
   - m_ElementType: 1
-    m_Unicode: 269
-    m_GlyphIndex: 207
+    m_Unicode: 283
+    m_GlyphIndex: 221
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 28268798066460806}
@@ -382,9 +367,9 @@ Texture2D:
     Hash: 00000000000000000000000000000000
   m_IsAlphaChannelOptional: 0
   serializedVersion: 4
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 1
+  m_Width: 512
+  m_Height: 512
+  m_CompleteImageSize: 262144
   m_MipsStripped: 0
   m_TextureFormat: 1
   m_MipCount: 1

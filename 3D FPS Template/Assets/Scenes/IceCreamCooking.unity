@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbab5b148ecbb448a7c9eee54d2a395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceCreamIngredient
-  ingredientName: bloodOrange
+  ingredientName: BloodOrange
 --- !u!114 &815829935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbab5b148ecbb448a7c9eee54d2a395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceCreamIngredient
-  ingredientName: tangerine
+  ingredientName: Tangerine
 --- !u!114 &998451373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6702,7 +6702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbab5b148ecbb448a7c9eee54d2a395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceCreamIngredient
-  ingredientName: strawberry
+  ingredientName: Strawberry
 --- !u!114 &1341125647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7119,7 +7119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbab5b148ecbb448a7c9eee54d2a395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceCreamIngredient
-  ingredientName: banana
+  ingredientName: Banana
 --- !u!114 &1830455041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7643,7 +7643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbab5b148ecbb448a7c9eee54d2a395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceCream
-  ingredientName: pineappple
+  ingredientName: Pineapple
 --- !u!114 &2135344446
 MonoBehaviour:
   m_ObjectHideFlags: 0
