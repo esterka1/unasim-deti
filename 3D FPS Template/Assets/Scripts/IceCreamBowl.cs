@@ -28,7 +28,7 @@ public class IceCreamBowl : MonoBehaviour
             return;
         }
 
-        Ingredient ingredient = other.GetComponent<Ingredient>();
+        IceCreamIngredient ingredient = other.GetComponent<IceCreamIngredient>();
 
         if (ingredient == null)
         {

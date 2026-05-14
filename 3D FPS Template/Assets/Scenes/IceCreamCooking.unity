@@ -6985,9 +6985,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578712358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00bb53770ef84f647a143dcaad858f47, type: 3}
+  m_Script: {fileID: 11500000, guid: 21525dc968950b146b9dabc493f63f9f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ReturnFromCooking
+  m_EditorClassIdentifier: Assembly-CSharp::ReturnFromIceCream
+  returnSceneName: unos1
 --- !u!1 &1657829703
 GameObject:
   m_ObjectHideFlags: 0
