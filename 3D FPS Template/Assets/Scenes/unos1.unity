@@ -1511,7 +1511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &388809659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1524,11 +1524,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 431154577}
+  m_Father: {fileID: 643530963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388809660
@@ -1823,8 +1823,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1623376711}
-  - {fileID: 1752114361}
-  - {fileID: 388809659}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2382,6 +2380,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1706195948}
+  - {fileID: 1752114361}
+  - {fileID: 388809659}
   m_Father: {fileID: 764761897}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2447,7 +2447,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2568,7 +2568,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.7742352, y: 7.3251176, z: 3.7039614}
   m_Center: {x: -0.44569454, y: 3.1625574, z: 1.3519845}
---- !u!114 &680846583
+--- !u!114 &680846584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2577,15 +2577,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 680846580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cc23c93d919d3e4ab8b40af0d8ca680, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bec00e1c32442043a0454a47343da18, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Dite1Dialog
-  pressEText: {fileID: 388809658}
-  pressELabel: {fileID: 388809660}
-  dialogText: {fileID: 1752114362}
-  firstMessage: "M\xE1m chu\u0165 na jahodovo-bananovou zmrzlinu..."
-  correctMessage: "D\u011Bkuju moc... To je p\u0159esn\u011B to co jsem cht\u011Bl."
-  wrongMessage: "Umm... to nen\xED to co jsem cht\u011Bl..."
+  m_EditorClassIdentifier: Assembly-CSharp::DeliverIceCream
+  dite1: {fileID: 680846585}
+  dialogueText: {fileID: 1752114362}
+--- !u!114 &680846585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680846580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fbd97d0d2dbb24c866dee29551dfe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dite1Vyhodnoceni
+  dialogueText: {fileID: 1752114362}
 --- !u!1001 &696406178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5210,13 +5219,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bf3ae98199eaf04d8f710a2091d96a7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 680846583}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bf3ae98199eaf04d8f710a2091d96a7, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 680846582}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bf3ae98199eaf04d8f710a2091d96a7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 680846581}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bf3ae98199eaf04d8f710a2091d96a7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 680846585}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bf3ae98199eaf04d8f710a2091d96a7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 680846584}
   m_SourcePrefab: {fileID: 100100000, guid: 4bf3ae98199eaf04d8f710a2091d96a7, type: 3}
 --- !u!1 &1503949760
 GameObject:
@@ -6069,11 +6081,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 431154577}
+  m_Father: {fileID: 643530963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752114362

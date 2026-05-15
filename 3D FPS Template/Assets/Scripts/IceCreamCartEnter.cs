@@ -20,15 +20,17 @@ public class IceCreamCartEnter : MonoBehaviour
 
     void Update()
     {
-        if (playerNear && Dite1Dialog.dite1ObjednavkaPrijata && Input.GetKeyDown(KeyCode.E))
+        if (playerNear && IceCreamData.dite1Talked && Input.GetKeyDown(KeyCode.E))
         {
+            IceCreamData.delalIcecream = true;
             SceneManager.LoadScene(cookingSceneName);
         }
     }
 
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && Dite1Dialog.dite1ObjednavkaPrijata)
+        if (other.CompareTag("Player") && IceCreamData.dite1Talked)
         {
             playerNear = true;
 
