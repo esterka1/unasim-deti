@@ -24,6 +24,7 @@ public class stewscript : MonoBehaviour
             return;
 
         addedIngredients.Add(ingredient.ingredientName);
+        SoupData.addedIngredients = new List<string>(addedIngredients);
 
         if (addIngredientEffect != null)
         {

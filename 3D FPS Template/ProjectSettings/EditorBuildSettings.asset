@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/PredDomem.unity
     guid: 49365307ba551a742a44713ab155c846
   - enabled: 1
@@ -17,6 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/vareniMinihra.unity
     guid: 83edd1044bafddd49be28f6c2d4c9f4a
+  - enabled: 1
+    path: Assets/Scenes/unos1.unity
+    guid: 4e4be47f16cbdb8448eae1eb36848f13
+  - enabled: 1
+    path: Assets/Scenes/IceCreamCooking.unity
+    guid: d5a5b87f1acee824c8c0e833dab7e4ba
+  - enabled: 1
+    path: Assets/Scenes/main menu.unity
+    guid: dc9bfa680cf33184083121e53381ab0c
+  - enabled: 1
+    path: Assets/Scenes/unos2.unity
+    guid: db72f2e37ccc9ec46a4c7b1b4ea522a4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
