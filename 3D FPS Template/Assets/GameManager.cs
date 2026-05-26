@@ -43,25 +43,26 @@ public class GameManager : MonoBehaviour
     {
         if (currentHint == "small")
         {
-            hintText.text = "Chci malou hračku...";
+            hintText.text = "I want a small toy..";
         }
         else
         {
-            hintText.text = "Chci velkou hračku...";
+            hintText.text = "I want a big toy..";
         }
     }
+public void PickToy(Toy toy)
+{
+    if (state != GameState.FindToy)
+        return;
 
-    public void PickToy(Toy toy)
-    {
-        if (state != GameState.FindToy)
-            return;
+    heldToy = toy;
 
-        heldToy = toy;
+    state = GameState.ReturnToChild;
 
-        state = GameState.ReturnToChild;
+    hintText.text = "You got the toy, bring it back to the child..";
 
-        hintText.text = "Vrať se za dítětem";
-    }
+    toy.gameObject.SetActive(false);
+}
 
     public void DeliverToy()
     {
@@ -70,11 +71,11 @@ public class GameManager : MonoBehaviour
 
         if (heldToy != null && heldToy.Matches(currentHint))
         {
-            hintText.text = "To je ono!";
+            hintText.text = "That's it!";
         }
         else
         {
-            hintText.text = "To není ono...";
+            hintText.text = "That's not  what I wanted..";
         }
     }
 }
