@@ -25,13 +25,15 @@ public class DeliverIceCream : MonoBehaviour
             }
 
             // první dialog
-            Debug.Log("Ice cream " + IceCreamData.dite1Talked);
+                    Debug.Log("Ice cream " + IceCreamData.dite1Talked);
+
             if (!IceCreamData.dite1Talked)
             {
                 IceCreamData.dite1Talked = true;
 
                 dialogueText.text =
                     "Mám chut na jahodovo-bananovou zmrzlinu...";
+                Debug.Log("dialog1");
             }
             // vyhodnocení
             else

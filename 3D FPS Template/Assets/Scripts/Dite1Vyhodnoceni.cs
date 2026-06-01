@@ -6,7 +6,7 @@ public class Dite1Vyhodnoceni : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public static bool dite1ObjednavkaPrijata = false;
 
-    void OnApplcationQuit()
+    void OnApplicationQuit()
     {
             IceCreamData.delalIcecream = false;
             IceCreamData.finished = false;
