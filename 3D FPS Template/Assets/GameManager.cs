@@ -43,11 +43,11 @@ public class GameManager : MonoBehaviour
     {
         if (currentHint == "small")
         {
-            hintText.text = "I want a small toy..";
+            hintText.text = "<color=#FF69B4><b>GIRL:</b></color>\nI want a small toy.";
         }
         else
         {
-            hintText.text = "I want a big toy..";
+            hintText.text = "<color=#FF69B4><b>GIRL:</b></color>\nI want a big toy.";
         }
     }
 public void PickToy(Toy toy)
@@ -59,7 +59,7 @@ public void PickToy(Toy toy)
 
     state = GameState.ReturnToChild;
 
-    hintText.text = "You got the toy, bring it back to the child..";
+    hintText.text = "I found a toy. I should bring it back to her.";
 
     toy.gameObject.SetActive(false);
 }
@@ -71,11 +71,11 @@ public void PickToy(Toy toy)
 
         if (heldToy != null && heldToy.Matches(currentHint))
         {
-            hintText.text = "That's it!";
+            hintText.text = "<color=#FF69B4><b>GIRL:</b></color>\nThat's it!";
         }
         else
         {
-            hintText.text = "That's not  what I wanted..";
+            hintText.text = "<color=#FF69B4><b>GIRL:</b></color>\nThat's not  what I wanted..";
         }
     }
 }
