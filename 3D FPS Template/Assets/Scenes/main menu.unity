@@ -3295,7 +3295,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808083807}
   m_CullTransparentMesh: 1
---- !u!1 &1962767522
+--- !u!1 &1918389163
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3303,8 +3303,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1962767524}
-  - component: {fileID: 1962767523}
+  - component: {fileID: 1918389165}
+  - component: {fileID: 1918389164}
   m_Layer: 0
   m_Name: SoupReset
   m_TagString: Untagged
@@ -3312,28 +3312,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1962767523
+--- !u!114 &1918389164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962767522}
+  m_GameObject: {fileID: 1918389163}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f781bae51527f149a15642ef8839f6d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!4 &1962767524
+  m_EditorClassIdentifier: Assembly-CSharp::SoupReset
+--- !u!4 &1918389165
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962767522}
+  m_GameObject: {fileID: 1918389163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.96736, y: 2.28398, z: -4.56422}
+  m_LocalPosition: {x: 57.11473, y: 0, z: -5.16816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3662,4 +3662,4 @@ SceneRoots:
   - {fileID: 1537710105}
   - {fileID: 1016791283}
   - {fileID: 1757116462}
-  - {fileID: 1962767524}
+  - {fileID: 1918389165}
