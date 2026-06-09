@@ -26,6 +26,7 @@ public class barunkaVyhodnoceni : MonoBehaviour
         if (hasSteak && hasPotato && hasLeek && SoupData.addedIngredients.Count == 3)
         {
             dialogueText.text = "To je přesně ono!";
+            FlowAfterSoup.instance.AfterCorrectFood();
         }
         else
         {
