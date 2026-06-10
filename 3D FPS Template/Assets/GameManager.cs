@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +11,13 @@ public class GameManager : MonoBehaviour
     public GameState state;
     public string currentHint;
     public Toy heldToy;
+
     public TMP_Text hintText;
     public TMP_Text questText;
+    public TMP_Text endingText;
+
+    public Image fadePanel;
+    public string nextSceneName = "vByte";
 
     void Awake()
     {
@@ -22,7 +29,12 @@ public class GameManager : MonoBehaviour
         state = GameState.GoToChild;
 
         hintText.text = "";
-        questText.text = "<color=yellow><b>OBJECTIVE</b></color>\nTalk to the child";
+        endingText.text = "";
+        questText.text = "<color=yellow><b>ÚKOL</b></color>\nPromluv si s dítětem.";
+
+        Color c = fadePanel.color;
+        c.a = 0f;
+        fadePanel.color = c;
     }
 
     public void StartQuest()
@@ -44,13 +56,17 @@ public class GameManager : MonoBehaviour
 
         if (currentHint == "small")
         {
-            hintText.text = "<color=#FF69B4><b>GIRL:</b></color>\nI want a small toy.";
-            questText.text = "<color=yellow><b>OBJECTIVE</b></color>\nFind a small toy";
+            hintText.text = "<color=#FF69B4><b>HOLČIČKA:</b></color>\nChtěla bych malou hračku.";
+
+            questText.text =
+                "<color=yellow><b>ÚKOL</b></color>\nNajdi malou hračku.";
         }
         else
         {
-            hintText.text = "<color=#FF69B4><b>GIRL:</b></color>\nI want a big toy.";
-            questText.text = "<color=yellow><b>OBJECTIVE</b></color>\nFind a big toy";
+            hintText.text = "<color=#FF69B4><b>HOLČIČKA:</b></color>\nChtěla bych velkou hračku.";
+
+            questText.text =
+                "<color=yellow><b>ÚKOL</b></color>\nNajdi velkou hračku.";
         }
 
         StartCoroutine(ShowInnerMonologue());
@@ -63,13 +79,9 @@ public class GameManager : MonoBehaviour
         hintText.color = Color.white;
 
         if (currentHint == "small")
-        {
-            hintText.text = "<i>She wants something small. I should look around.</i>";
-        }
+            hintText.text = "<i>Chce něco malého... Měl bych se porozhlédnout.</i>";
         else
-        {
-            hintText.text = "<i>She wants a bigger toy. I should find one.</i>";
-        }
+            hintText.text = "<i>Chce větší hračku... Musím nějakou najít.</i>";
 
         yield return new WaitForSeconds(2f);
 
@@ -84,9 +96,15 @@ public class GameManager : MonoBehaviour
         while (time < duration)
         {
             float alpha = Mathf.Lerp(1f, 0f, time / duration);
-            text.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+
+            text.color = new Color(
+                startColor.r,
+                startColor.g,
+                startColor.b,
+                alpha);
 
             time += Time.deltaTime;
+
             yield return null;
         }
 
@@ -103,9 +121,12 @@ public class GameManager : MonoBehaviour
         state = GameState.ReturnToChild;
 
         hintText.color = Color.white;
-        hintText.text = "<i>I found a toy. I should bring it back to her.</i>";
+        hintText.text = "<i>Našel jsem hračku. Měl bych ji donést zpátky holčičce.</i>";
 
-        questText.text = "<color=yellow><b>OBJECTIVE</b></color>\nBring it back to the child";
+        questText.text =
+            "<color=yellow><b>ÚKOL</b></color>\nVrať se za dítětem.";
+
+        StartCoroutine(FadeOutText(hintText, 2f));
 
         toy.gameObject.SetActive(false);
     }
@@ -119,12 +140,68 @@ public class GameManager : MonoBehaviour
 
         if (heldToy != null && heldToy.Matches(currentHint))
         {
-            hintText.text = "<color=#FF69B4><b>GIRL:</b></color>\nThat's it!";
             questText.text = "";
+            StartCoroutine(SuccessEnding());
         }
         else
         {
-            hintText.text = "<color=#FF69B4><b>GIRL:</b></color>\nThat's not what I wanted...";
+            hintText.text =
+                "<color=#FF69B4><b>HOLČIČKA:</b></color>\nTo není to, co jsem chtěla...";
+
+            questText.text =
+                "<color=yellow><b>ÚKOL</b></color>\nŽádná odměna.";
         }
+    }
+
+    IEnumerator SuccessEnding()
+    {
+        hintText.text =
+            "<color=#FF69B4><b>HOLČIČKA:</b></color>\nAno, přesně takovou jsem chtěla!";
+
+        yield return new WaitForSeconds(2f);
+
+        hintText.text =
+            "<i>Dobře... Teď mi důvěřuje.</i>";
+
+        yield return new WaitForSeconds(3f);
+
+        StartCoroutine(FadeOutText(hintText, 2f));
+
+        yield return new WaitForSeconds(2f);
+
+        yield return StartCoroutine(FadeToBlack(2f));
+
+        endingText.text = "Šla za mnou bez jediného zaváhání.";
+        yield return new WaitForSeconds(3f);
+
+        endingText.text = "Práce byla dokončena.";
+        yield return new WaitForSeconds(3f);
+
+        endingText.text = "Dostal jsem zaplaceno.";
+        yield return new WaitForSeconds(3f);
+
+        SceneManager.LoadScene(nextSceneName);
+    }
+
+    IEnumerator FadeToBlack(float duration)
+    {
+        float time = 0f;
+
+        Color color = fadePanel.color;
+        color.a = 0f;
+        fadePanel.color = color;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+
+            color.a = Mathf.Lerp(0f, 1f, time / duration);
+            fadePanel.color = color;
+
+            yield return null;
+        }
+
+        color.a = 1f;
+        fadePanel.color = color;
     }
 }
